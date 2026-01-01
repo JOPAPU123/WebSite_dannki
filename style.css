@@ -1,39 +1,74 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<title>Данна</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
-<div class="bg"></div>
+* { margin:0; padding:0; box-sizing:border-box }
 
-<section class="hero">
-  <h1 class="glow">Данна</h1>
-  <p class="subtitle">Этот сайт для тебя, потому что ты лучший закарпут.  
-  Все остальные — отсталые.</p>
-</section>
+body {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  background: black;
+  overflow-x: hidden;
+}
 
-<section class="love">
-  <p>
-    Ты не просто красивая — ты особенная.  
-    В тебе есть то, что нельзя подделать.  
-    Твоя энергия, твой взгляд, твой стиль —  
-    всё это остаётся в голове надолго.  
-    Этот сайт — маленькое напоминание о том,  
-    что ты значишь для меня намного больше,  
-    чем просто слова.
-  </p>
-</section>
+.bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #2b1055, #000);
+  z-index: -1;
+}
 
-<section class="gallery">
-  <img src="images/1.jpg">
-  <img src="images/2.jpg">
-  <img src="images/3.jpg">
-</section>
+.hero {
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
 
-<footer>Для Данны 💔</footer>
+.glow {
+  font-size: 80px;
+  text-shadow: 0 0 30px #ff4ecd;
+}
 
-</body>
-</html>
+.subtitle {
+  font-size: 22px;
+  max-width: 600px;
+  opacity: 0.85;
+}
+
+.love {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.love p {
+  font-size: 22px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.gallery {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:60px 20px;
+  flex-wrap:wrap;
+}
+
+.gallery img {
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(255,78,205,.4);
+  transition: 0.4s;
+}
+
+.gallery img:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+footer {
+  padding: 40px;
+  text-align: center;
+  opacity: .7;
+}
